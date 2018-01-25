@@ -22,9 +22,9 @@
 
         private static IEnumerable<int> GetData()
         {
-            for (var i = 0; i < 1000000; i++)
+            for (var counter = 0; counter < 1000000; counter++)
             {
-                if (i == 5)
+                if (counter == 5)
                 {
                     // This breaks the loop.
                     yield break;
@@ -32,7 +32,7 @@
 
                 //// returns control to caller.
 
-                yield return i;
+                yield return counter;
             }
         }
     }
