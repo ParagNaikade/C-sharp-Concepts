@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yield", "Yield\Yield.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{7FCC2466-A239-4127-BA70-3029383346DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{CDA01096-5647-418F-A306-DAB0B16B6A5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7FCC2466-A239-4127-BA70-3029383346DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FCC2466-A239-4127-BA70-3029383346DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FCC2466-A239-4127-BA70-3029383346DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA01096-5647-418F-A306-DAB0B16B6A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA01096-5647-418F-A306-DAB0B16B6A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA01096-5647-418F-A306-DAB0B16B6A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA01096-5647-418F-A306-DAB0B16B6A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,22 +18,36 @@ namespace Delegates
 
         static void Main(string[] args)
         {
+            Console.WriteLine(
+                @"C# delegates are similar to pointers to functions, in C or C++. 
+With the help of deletgates, methods can be passed as a parameter to another methods.
+A delegate is a reference type variable that holds the reference to a method. 
+The reference can be changed at runtime.");
+
+            Console.WriteLine(Environment.NewLine);
+
+            Console.WriteLine(@"Following example shows a delegate DoOperations. It is used 
+to perform various operations on 2 integers like add, subtract and multiply.");
+            Console.WriteLine(Environment.NewLine);
+
             DoOperations add = new DoOperations(Add);
-            Console.WriteLine("Addition: " + add(2, 3));
+            Console.WriteLine("Addition 2+3 = " + add(2, 3));
 
             DoOperations subtract = Subtract;
-            Console.WriteLine("Subtraction: " + subtract(2, 3));
+            Console.WriteLine("Subtraction 2-3 = " + subtract(2, 3));
 
+            result = 1;
             DoOperations multiply = Multiply;
-            Console.WriteLine("Multiplication: " + multiply(2, 3));
+            Console.WriteLine("Multiplication 2*3 = " + multiply(2, 3));
 
-            // This is multicast delegate. When delegate is invoked, seris of methods will be invoked.
-            // In this case, first Add method and then Multiply method will be invoked.
+            Console.WriteLine(Environment.NewLine);
+
+
+            Console.WriteLine(@"This is multicast delegate. When delegate is invoked, seris of methods will be invoked.
+In this case, first Add method and then Multiply method will be invoked.");
             add += multiply;
 
-            Console.WriteLine("Addition: " + CallBackMethod(add, 2, 3));
-            Console.WriteLine("Subtraction: " + CallBackMethod(subtract, 2, 3));
-            Console.WriteLine("Multiplication: " + CallBackMethod(multiply, 2, 3));
+            Console.WriteLine("Result 2+3 = 5; 5*(2*3) = : " + CallBackMethod(add, 2, 3));
 
 
             Console.ReadKey();
