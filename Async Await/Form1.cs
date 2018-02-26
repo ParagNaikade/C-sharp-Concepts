@@ -18,7 +18,7 @@ namespace Async_Await
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Main thread1: {0}", Thread.CurrentThread.ManagedThreadId);
 
@@ -34,12 +34,9 @@ namespace Async_Await
         {
             Console.WriteLine("DoSomething1: {0}", Thread.CurrentThread.ManagedThreadId);
 
-            await Task.Run(() =>
-            {
-                Console.WriteLine("DoSomething2: {0}", Thread.CurrentThread.ManagedThreadId);
-            });
+            await Task.Delay(1000);
 
-            return "OK";
+            return await Task.FromResult("OK");
         }
     }
 }
